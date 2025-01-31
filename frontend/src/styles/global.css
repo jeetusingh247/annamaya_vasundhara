@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* 🌍 Global Styles - Nature Inspired */
+body {
+  @apply bg-gradient-to-b from-green-100 to-blue-100 text-gray-900 font-sans transition-all ease-in-out duration-300;
+}
+
+/* 🌿 Universal Link Styling - Soft & Inviting */
+a {
+  @apply text-green-600 hover:text-green-800 font-semibold transition-all ease-in-out duration-200;
+}
+
+/* 🏡 Navbar Styles - Friendly & Fun */
+.navbar {
+  @apply bg-green-500 text-white p-4 shadow-lg rounded-b-xl transition-all duration-300 ease-in-out;
+}
+
+.navbar-container {
+  @apply container mx-auto flex justify-between items-center;
+}
+
+.navbar-brand {
+  @apply text-2xl font-extrabold tracking-wide italic text-yellow-300;
+}
+
+.navbar-link {
+  @apply mx-3 text-lg font-semibold hover:text-yellow-200 transition-all duration-200 ease-in-out;
+}
+
+/* 🌎 Footer Styles - Soft & Eco-Friendly */
+.footer {
+  @apply bg-gray-900 text-white p-6 mt-12 rounded-t-2xl shadow-inner;
+}
+
+.footer-container {
+  @apply container mx-auto text-center flex flex-col space-y-2;
+}
+
+.footer-text {
+  @apply text-gray-300 text-sm italic;
+}
+
+.footer-link {
+  @apply text-green-400 hover:text-yellow-300 font-medium transition-all duration-200;
+}
+
+/* 🌟 Home Page Styles - Fun & Kiddy Friendly */
+.home {
+  @apply p-8 flex flex-col items-center text-center bg-green-50 rounded-lg shadow-md;
+}
+
+.home-title {
+  @apply text-4xl font-extrabold mb-4 text-green-700 drop-shadow-lg tracking-wide;
+}
+
+.home-content {
+  @apply text-lg text-gray-700 leading-relaxed font-medium max-w-2xl;
+}
+
+/* 🌱 Adding a Nature Illustration */
+.home-illustration {
+  background-image: url('/public/earth-care.png'); /* Add a cute Earth illustration */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply w-48 h-48 mt-4;
+}
+
+/* 🦋 About Page Styles - Nature Meets Storytelling */
+.about {
+  @apply p-8 bg-blue-50 rounded-lg shadow-lg flex flex-col items-center text-center;
+}
+
+.about-title {
+  @apply text-4xl font-extrabold text-blue-600 tracking-wide mb-4;
+}
+
+.about-content {
+  @apply text-lg text-gray-700 leading-relaxed font-medium max-w-3xl;
+}
+
+/* 🐝 Fun Animation Effects */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.float-animation {
+  animation: float 3s infinite ease-in-out;
+}
+
+/* 🍃 Button Styling - Earthy & Inviting */
+.btn-primary {
+  @apply bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-all duration-300 font-bold tracking-wide;
+}
+
+.btn-secondary {
+  @apply bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg shadow-md hover:bg-yellow-500 transition-all duration-300 font-bold tracking-wide;
+}
+
+/* 🌟 Extra Custom Nature-Themed Elements */
+.leaf-icon {
+  content: "🌿";
+  @apply text-green-500 text-xl;
+}
+
+.earth-icon {
+  content: "🌍";
+  @apply text-blue-500 text-xl;
+}
+
+.butterfly-animation {
+  content: "🦋";
+  @apply text-purple-500 text-xl animate-ping;
+}
