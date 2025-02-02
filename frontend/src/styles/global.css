@@ -1,116 +1,176 @@
 @import "tailwindcss";
 
-/* 🌍 Global Styles - Nature Inspired */
+/* 🌍 Background Animation: Simulating daylight shifts */
 body {
-  @apply bg-gradient-to-b from-green-100 to-blue-100 text-gray-900 font-sans transition-all ease-in-out duration-300;
+  @apply text-gray-900 font-sans transition-all duration-500 ease-in-out;
+  animation: backgroundShift 12s infinite alternate ease-in-out;
 }
 
-/* 🌿 Universal Link Styling - Soft & Inviting */
-a {
-  @apply text-green-600 hover:text-green-800 font-semibold transition-all ease-in-out duration-200;
+@keyframes backgroundShift {
+  0% { background: linear-gradient(to bottom right, #34d399, #10b981); }
+  50% { background: linear-gradient(to bottom right, #16a34a, #059669); }
+  100% { background: linear-gradient(to bottom right, #34d399, #10b981); }
 }
 
-/* 🏡 Navbar Styles - Friendly & Fun */
+/* 🌱 Typography: Natural & Bold */
+h1, h2, h3 {
+  @apply font-extrabold tracking-wide text-white drop-shadow-lg;
+}
+
+h1 {
+  @apply text-5xl md:text-6xl lg:text-7xl;
+}
+
+h2 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+p {
+  @apply text-lg md:text-xl text-gray-700 leading-relaxed font-medium;
+}
+
+/* 🏡 Navbar - Clean & Vibrant */
 .navbar {
-  @apply bg-green-500 text-white p-4 shadow-lg rounded-b-xl transition-all duration-300 ease-in-out;
+  @apply bg-green-700 text-white py-4 px-6 shadow-lg fixed top-0 w-full z-50 transition-all duration-300 ease-in-out;
 }
 
-.navbar-container {
-  @apply container mx-auto flex justify-between items-center;
+.navbar a {
+  @apply text-white font-semibold px-4 py-2 rounded-md hover:bg-green-500 transition-all ease-in-out duration-300;
 }
 
-.navbar-brand {
-  @apply text-2xl font-extrabold tracking-wide italic text-yellow-300;
+/* 📊 Dashboard Section */
+.dashboard-container {
+  @apply container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
 }
 
-.navbar-link {
-  @apply mx-3 text-lg font-semibold hover:text-yellow-200 transition-all duration-200 ease-in-out;
+/* 🌿 Dashboard Cards */
+.card {
+  @apply bg-white shadow-xl rounded-2xl p-6 transition-all duration-300;
 }
 
-/* 🌎 Footer Styles - Soft & Eco-Friendly */
-.footer {
-  @apply bg-gray-900 text-white p-6 mt-12 rounded-t-2xl shadow-inner;
+.card:hover {
+  @apply scale-105 shadow-2xl;
 }
 
-.footer-container {
-  @apply container mx-auto text-center flex flex-col space-y-2;
-}
-
-.footer-text {
-  @apply text-gray-300 text-sm italic;
-}
-
-.footer-link {
-  @apply text-green-400 hover:text-yellow-300 font-medium transition-all duration-200;
-}
-
-/* 🌟 Home Page Styles - Fun & Kiddy Friendly */
-.home {
-  @apply p-8 flex flex-col items-center text-center bg-green-50 rounded-lg shadow-md;
-}
-
-.home-title {
-  @apply text-4xl font-extrabold mb-4 text-green-700 drop-shadow-lg tracking-wide;
-}
-
-.home-content {
-  @apply text-lg text-gray-700 leading-relaxed font-medium max-w-2xl;
-}
-
-/* 🌱 Adding a Nature Illustration */
-.home-illustration {
-  background-image: url('/public/earth-care.png'); /* Add a cute Earth illustration */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  @apply w-48 h-48 mt-4;
-}
-
-/* 🦋 About Page Styles - Nature Meets Storytelling */
-.about {
-  @apply p-8 bg-blue-50 rounded-lg shadow-lg flex flex-col items-center text-center;
-}
-
-.about-title {
-  @apply text-4xl font-extrabold text-blue-600 tracking-wide mb-4;
-}
-
-.about-content {
-  @apply text-lg text-gray-700 leading-relaxed font-medium max-w-3xl;
-}
-
-/* 🐝 Fun Animation Effects */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-
-.float-animation {
-  animation: float 3s infinite ease-in-out;
-}
-
-/* 🍃 Button Styling - Earthy & Inviting */
+/* 📢 Call to Action Button */
 .btn-primary {
-  @apply bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-all duration-300 font-bold tracking-wide;
+  @apply bg-green-600 text-white px-6 py-3 rounded-lg shadow-md font-bold tracking-wide;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-secondary {
-  @apply bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg shadow-md hover:bg-yellow-500 transition-all duration-300 font-bold tracking-wide;
+.btn-primary:hover {
+  @apply bg-green-800 scale-105;
 }
 
-/* 🌟 Extra Custom Nature-Themed Elements */
-.leaf-icon {
-  content: "🌿";
-  @apply text-green-500 text-xl;
+/* 🍃 Floating Leaves */
+@keyframes floatLeaf {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(-15px) rotate(10deg); opacity: 1; }
 }
 
-.earth-icon {
-  content: "🌍";
-  @apply text-blue-500 text-xl;
+.floating-leaf {
+  animation: floatLeaf 3s infinite ease-in-out;
 }
 
-.butterfly-animation {
-  content: "🦋";
-  @apply text-purple-500 text-xl animate-ping;
+/* 🦋 Butterfly Animation */
+@keyframes butterflyFlutter {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-10px) translateX(10px); }
+}
+
+.butterfly {
+  animation: butterflyFlutter 3s infinite ease-in-out;
+}
+
+/* 🎠 Carousel Styling */
+.carousel-container {
+  @apply relative overflow-hidden rounded-xl shadow-lg bg-white p-6;
+}
+
+.carousel-item {
+  @apply text-center text-lg font-medium text-gray-700;
+}
+
+/* 🌟 Animations for Interactive UI */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+.scale-up {
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+/* 🌍 Footer */
+.footer {
+  @apply bg-gray-900 text-white p-6 mt-12 rounded-t-2xl text-center;
+}
+
+.footer a {
+  @apply text-green-300 hover:text-yellow-300 transition-all duration-300;
+}
+
+/* 📱 Responsive Design for All Devices */
+@media (max-width: 640px) {
+  body { @apply bg-gradient-to-br from-green-200 via-yellow-100 to-blue-200; }
+  h1 { @apply text-3xl; }
+  p { @apply text-base; }
+  .navbar { @apply flex flex-col items-center text-center; }
+  .btn-primary { @apply px-4 py-2 text-sm; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  body { @apply bg-gradient-to-br from-green-300 via-yellow-200 to-blue-100; }
+  h1 { @apply text-4xl; }
+  p { @apply text-lg; }
+}
+
+@media (min-width: 1025px) {
+  body { @apply bg-gradient-to-br from-green-400 via-blue-300 to-yellow-300; }
+  h1 { @apply text-6xl; }
+  p { @apply text-xl; }
+}
+
+/* 🛠️ Login Form Styling */
+.login-container {
+  @apply flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600;
+}
+
+.login-form {
+  @apply bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md;
+  animation: fadeIn 1s ease-out;
+}
+
+.login-form h2 {
+  @apply text-3xl font-bold mb-6 text-center text-gray-800;
+}
+
+.login-form input {
+  @apply w-full p-4 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300;
+}
+
+.login-form button {
+  @apply w-full bg-green-600 text-white py-3 rounded-lg shadow-md font-bold tracking-wide;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+  @apply bg-green-800 scale-105;
+}
+
+.login-form .forgot-password {
+  @apply text-center text-gray-600 mt-4;
+}
+
+.login-form .forgot-password a {
+  @apply text-green-500 hover:text-green-700 transition-all duration-300;
 }
