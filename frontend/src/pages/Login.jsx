@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -20,6 +22,8 @@ const Login = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
             <div className="relative py-3 sm:max-w-md sm:mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -55,7 +59,7 @@ const Login = () => {
                                     {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
                                 </div>
                                 <div className="relative">
-                                    <button type="submit" className="bg-green-500 text-white rounded-md px-2 py-1">
+                                    <button type="submit" className="bg-green-600 text-white rounded-md px-2 py-1">
                                         Submit
                                     </button>
                                 </div>
@@ -82,6 +86,8 @@ const Login = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 };
 
