@@ -3,13 +3,6 @@
 /* 🌍 Background Animation: Simulating daylight shifts */
 body {
   @apply text-gray-900 font-sans transition-all duration-500 ease-in-out;
-  animation: backgroundShift 12s infinite alternate ease-in-out;
-}
-
-@keyframes backgroundShift {
-  0% { background: linear-gradient(to bottom right, #34d399, #10b981); }
-  50% { background: linear-gradient(to bottom right, #16a34a, #059669); }
-  100% { background: linear-gradient(to bottom right, #34d399, #10b981); }
 }
 
 /* 🌱 Typography: Natural & Bold */
@@ -159,7 +152,7 @@ p {
 }
 
 .login-form button {
-  @apply w-full bg-green-600 text-white py-3 rounded-lg shadow-md font-bold tracking-wide;
+  @apply w-full bg-green-400 text-white py-3 rounded-lg shadow-md font-bold tracking-wide;
   transition: all 0.3s ease-in-out;
 }
 
