@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
              <h3 className="text-lg font-bold mb-4">About Us</h3>
-             <p>
+             <p className='text-white'>
              Annamaya Vasundhara is committed to providing the best services to our customers. Follow us on social media to stay updated.
              </p>
              </div>
