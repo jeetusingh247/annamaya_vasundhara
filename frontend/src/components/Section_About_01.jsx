@@ -21,7 +21,7 @@ const SectionAbout01 = () => {
                 background: white;
                 border-radius: 2rem;
                 @media (prefers-color-scheme: dark) {
-                    background: #2d3748;
+                    background: #a3c293;
                 }
             `}
         >
@@ -31,7 +31,7 @@ const SectionAbout01 = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Typography variant="h2" align="center" className="text-4xl font-extrabold text-green-900 mb-12">
+                    <Typography variant="h2" align="center" className="text-4xl font-extrabold mb-12">
                         Our Mission
                     </Typography>
                 </motion.div>
@@ -56,7 +56,7 @@ const SectionAbout01 = () => {
                                     <Typography variant="h5" className="text-[#8B4513] mb-4">
                                         {item.title}
                                     </Typography>
-                                    <Typography variant="body1" className="text-gray-300">
+                                    <Typography variant="h6" className="text-black">
                                         {item.description}
                                     </Typography>
                                 </Paper>
