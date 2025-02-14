@@ -1,33 +1,87 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
-const ContactForm = () => {
-    return (
-        <div className="bg-gray-800 text-gray-100 px-8 py-12">
-            <form action="https://getform.io/f/bgddnnya" method="post">
-                <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
-                    <div>
-                        <div>
-                            <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span>
-                            <input name="fullname" className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="" />
-                        </div>
-                        <div className="mt-8">
-                            <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
-                            <input name="email" className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
-                        </div>
-                        <div className="mt-8">
-                            <span className="uppercase text-sm text-gray-600 font-bold">Message</span>
-                            <textarea name="message" className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
-                        </div>
-                        <div className="mt-8">
-                            <button className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                                Send Message
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+const ContactUs = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-green-50 via-teal-50 to-green-50 py-6 flex flex-col justify-center sm:py-12">
+      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-teal-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+          <div className="text-center pb-6">
+            <motion.h1
+              className="text-3xl font-bold text-green-800"
+              style={{ fontFamily: 'Georgia, serif' }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Contact Us!
+            </motion.h1>
+            <motion.p
+              className="text-gray-600"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              Fill up the form below to send us a message.
+            </motion.p>
+          </div>
+          <form>
+            <motion.input
+              className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Name"
+              name="name"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            />
+            <motion.input
+              className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="email"
+              placeholder="Email"
+              name="email"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            />
+            <motion.input
+              className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Subject"
+              name="_subject"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            />
+            <motion.textarea
+              className="shadow mb-4 appearance-none border rounded h-32 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Type your message here..."
+              name="message"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            ></motion.textarea>
+            <div className="flex justify-between">
+              <motion.input
+                className="shadow bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit"
+                value="Send ➤"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              />
+              <motion.input
+                className="shadow bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="reset"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              />
+            </div>
+          </form>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
-export default ContactForm;
+export default ContactUs;
