@@ -16,7 +16,7 @@ const HeroSection = () => {
     };
 
     const cardStyle = {
-        backgroundColor: '#d0f0c0', // Light green background
+        backgroundColor: '#a3c293', // Darker green background
         transition: 'transform 0.3s, box-shadow 0.3s',
         ...(isHovered && {
             transform: 'scale(1.05)',
@@ -44,7 +44,7 @@ const HeroSection = () => {
                         onMouseLeave={() => setIsHovered(false)}
                     >
                         <CardContent>
-                            <Typography variant="h3" color='black' component="h1" gutterBottom>
+                            <Typography variant="h3" color='white' component="h1" gutterBottom>
                                 Embrace Nature
                             </Typography>
                             <Typography variant="body1" paragraph>
