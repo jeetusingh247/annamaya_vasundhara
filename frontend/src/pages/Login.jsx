@@ -19,6 +19,28 @@ const Login = () => {
     const onSubmit = (data) => {
         console.log(data);
         // Handle login logic here
+        // For example, you can send a request to your backend API
+        fetch('https://your-backend-api.com/login', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+            // Handle successful login, e.g., redirect to dashboard
+            console.log('Login successful:', data);
+            } else {
+            // Handle login failure, e.g., show error message
+            console.error('Login failed:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
     };
 
     return (
