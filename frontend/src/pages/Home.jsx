@@ -35,7 +35,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-           Welcome to <span className="text-yellow-500 ml-2 md:ml-5 lg:ml-10">Annamaya Vasundhara</span>
+           Welcome to<span className="text-yellow-500 ml-2 md:ml-5 lg:ml-10">Annamaya Vasundhara</span>
         </motion.h1>
 
         <motion.p 
