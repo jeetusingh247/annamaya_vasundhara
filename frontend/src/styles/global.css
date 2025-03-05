@@ -19,7 +19,7 @@ h2 {
 }
 
 p {
-  @apply text-lg md:text-xl text-gray-700 leading-relaxed font-medium;
+  @apply text-lg md:text-xl text-white leading-relaxed font-medium;
 }
 
 /* 🏡 Navbar - Clean & Vibrant */
@@ -114,7 +114,7 @@ p {
 
 /* 📱 Responsive Design for All Devices */
 @media (max-width: 640px) {
-  body { @apply bg-gradient-to-br from-green-200 via-yellow-100 to-blue-200; }
+  body { @apply bg-gradient-to-br from-green-300 via-yellow-200 to-blue-300; }
   h1 { @apply text-3xl; }
   p { @apply text-base; }
   .navbar { @apply flex flex-col items-center text-center; }
@@ -122,20 +122,20 @@ p {
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
-  body { @apply bg-gradient-to-br from-green-300 via-yellow-200 to-blue-100; }
+  body { @apply bg-gradient-to-br from-green-400 via-yellow-300 to-blue-200; }
   h1 { @apply text-4xl; }
   p { @apply text-lg; }
 }
 
 @media (min-width: 1025px) {
-  body { @apply bg-gradient-to-br from-green-400 via-blue-300 to-yellow-300; }
+  body { @apply bg-gradient-to-br from-green-500 via-blue-400 to-yellow-400; }
   h1 { @apply text-6xl; }
   p { @apply text-xl; }
 }
 
 /* 🛠️ Login Form Styling */
 .login-container {
-  @apply flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-blue-500 to-purple-600;
+  @apply flex items-center justify-center min-h-screen bg-gradient-to-r from-green-500 via-blue-600 to-purple-700;
 }
 
 .login-form {
