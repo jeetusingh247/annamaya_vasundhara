@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import { Container, Grid, Card, CardContent, Typography, Button } from '@mui/material';
 import Lottie from 'react-lottie';
 import animationData from '../assets/animations/environment.json'; // Adjust the path to your Lottie animation JSON file
 
 const HeroSection = () => {
     const [isHovered, setIsHovered] = useState(false);
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const defaultOptions = {
         loop: true,
@@ -22,6 +24,10 @@ const HeroSection = () => {
             transform: 'scale(1.05)',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
         })
+    };
+
+    const handleLearnMoreClick = () => {
+        navigate('/dashboard'); // Navigate to the dashboard
     };
 
     return (
@@ -50,7 +56,13 @@ const HeroSection = () => {
                             <Typography variant="body1" paragraph>
                                 Discover the beauty of the natural world and learn how we can work together to protect our environment. Join us in our mission to create a sustainable future for generations to come.
                             </Typography>
-                            <Button variant="contained" color="primary" size="large" style={{ backgroundColor: '#333', color: '#fff' }}>
+                            <Button 
+                                variant="contained" 
+                                color="primary" 
+                                size="large" 
+                                style={{ backgroundColor: '#333', color: '#fff' }}
+                                onClick={handleLearnMoreClick} // Add onClick handler
+                            >
                                 Learn More
                             </Button>
                         </CardContent>
