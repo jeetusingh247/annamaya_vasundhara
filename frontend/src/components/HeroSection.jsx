@@ -63,7 +63,7 @@ const HeroSection = () => {
                                 style={{ backgroundColor: '#333', color: '#fff' }}
                                 onClick={handleLearnMoreClick} // Add onClick handler
                             >
-                                Learn More
+                                Go Ahead
                             </Button>
                         </CardContent>
                     </Card>
